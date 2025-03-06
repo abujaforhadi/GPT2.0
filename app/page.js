@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "EchoChat - AI Assistant",
-  description: "A custom chat interface powered by EchoGPT",
+  title: "Chat2.0 - AI Assistant",
+  description: "A custom chat interface powered by jafor",
 }
 
 import ChatInterface from "@/components/chat-interface"

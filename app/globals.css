@@ -57,7 +57,6 @@
   animation: slideIn 0.3s ease forwards;
 }
 
-/* Add these animation delay classes at the end of the file */
 
 .animation-delay-200 {
   animation-delay: 200ms;

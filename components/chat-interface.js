@@ -72,7 +72,6 @@ export default function ChatInterface() {
     setMessages([])
   }
 
-  // Select a chat from history
   const selectChat = (chatId) => {
     const selectedChat = chatHistory.find((chat) => chat.id === chatId)
     if (selectedChat) {
@@ -81,7 +80,6 @@ export default function ChatInterface() {
     }
   }
 
-  // Delete a chat from history
   const deleteChat = (chatId) => {
     const updatedHistory = chatHistory.filter((chat) => chat.id !== chatId)
     setChatHistory(updatedHistory)
@@ -287,7 +285,7 @@ export default function ChatInterface() {
         >
           <div className="flex flex-col h-full">
             <div className="p-4 flex justify-between items-center">
-              <h1 className="text-xl font-bold text-white">EchoChat</h1>
+              <h1 className="text-xl font-bold text-white">Chat 2.0</h1>
               <div className="flex items-center space-x-2">
                 <button className="p-2 rounded-md text-white hover:bg-slate-700" onClick={() => setDarkMode(!darkMode)}>
                   {darkMode ? <Sun size={20} /> : <Moon size={20} />}
@@ -343,9 +341,9 @@ export default function ChatInterface() {
             {messages.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-full text-center p-4">
                 <Bot size={48} className="mb-4 text-slate-400" />
-                <h2 className="text-2xl font-bold text-slate-700 dark:text-slate-200 mb-2">Welcome to EchoChat</h2>
+                <h2 className="text-2xl font-bold text-slate-700 dark:text-slate-200 mb-2">Welcome to Chat 2.0</h2>
                 <p className="text-slate-500 dark:text-slate-400 max-w-md">
-                  Start a conversation with the AI assistant powered by EchoGPT.
+                  Start a conversation with the AI assistant powered by GPT 2.0.
                 </p>
                 {useSimulation && (
                   <div className="mt-4 p-2 bg-blue-100 dark:bg-blue-900 rounded-md text-blue-800 dark:text-blue-200 text-sm">
@@ -401,7 +399,7 @@ export default function ChatInterface() {
               </button>
             </form>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 text-center">
-              {useSimulation ? "Simulation Mode - Local Responses" : "Powered by EchoGPT API"}
+              {useSimulation ? "Simulation Mode - Local Responses" : "Powered by GPT 2.0"}
             </p>
           </div>
         </div>
