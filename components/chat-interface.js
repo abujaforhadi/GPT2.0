@@ -185,21 +185,21 @@ export default function ChatInterface() {
         })),
       ]
 
-     
       let response = await fetch('https://api.echogpt.live/v1/chat/completions', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'x-api-key': 'echogpt-uH386TWOCc-uWP8jzpjcq-zK74kglrlo-bNCBqvxKya-dx9j87coT7KcV62JRr1ap_W1'
+            'x-api-key': process.env.NEXT_PUBLIC_ECHOGPT_API_KEY
         },
         body: JSON.stringify({
             messages: [{ role: 'system', content: 'You are a helpful assistant.' }],
-            "model": "EchoGPT"
+            model: "EchoGPT"
         })
     })
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
+    
 
     
 
